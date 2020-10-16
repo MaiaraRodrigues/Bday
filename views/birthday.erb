@@ -1,0 +1,6 @@
+   <% if @bday == Date.today %>
+     <h1> Happy Birthday you lil' puta, ciao bella </h1>
+   <% else %>
+      <% @bday += 365.25 if Date.today >= @bday %>
+      <h1> Your birthday is in <%=(@bday - Date.today).to_i%> days </h1>
+    <% end %>
