@@ -12,7 +12,11 @@ class Bday < Sinatra::Base
   post '/birthday' do
     @birthday = Date.parse(params[:user_birthday])
     @bday = Date.new(Date.today.year, @birthday.month, @birthday.day)
-    @bday += 365.25 if Date.today >= @bday 
-    "Your birthday is in #{(@bday - Date.today).to_i} days"
+    if @bday == Date.today 
+      "Happy Birthday you lil' puta, ciao bella"
+    else
+      @bday += 365.25 if Date.today >= @bday 
+      "Your birthday is in #{(@bday - Date.today).to_i} days"
+    end
   end
 end 
