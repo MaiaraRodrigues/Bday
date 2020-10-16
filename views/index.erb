@@ -1,9 +1,17 @@
-<h1> Hey, you! </h1>
+<head>
+  <title>sup</title>
+  <link type="text/css" rel="stylesheet" href="<%=url('/styles.css')%>" />
+</head>
 
-<form action='/birthday' method='POST'>
-  <label for="name">Name:</label>
-  <input type="text" id="name" name="Name" required>
-  <label for="birthday">Birthday:</label>
-  <input type="date" id="birthday" name="user_birthday" required>
-  <input type="submit" value="Submit">
-</form>
+
+<body>
+  <h1> Hey, you! </h1>
+
+  <form action='/birthday' method='POST'>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="Name" required>
+    <label for="birthday">Birthday:</label>
+    <input type="date" id="birthday" name="user_birthday" required>
+    <input type="submit" value="Submit">
+  </form>
+</body>
